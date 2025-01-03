@@ -5,9 +5,24 @@ config.background_color = AS2700.Y35_OFF_WHITE
 
 class CreateCircle(Scene):
     def construct(self):
-        circle = Circle()  # create a circle
-        circle.set_fill(PINK, opacity=0.5)  # set the color and transparency
-        self.play(Create(circle))  # show the circle on screen
+        g = VGroup()
+        g.add(Circle())
+        g.add(Square())
+        g.add(Star())
+        g.add(Triangle())
+        # print(len(g))
+        for i in range(len(g)):
+            if i == 0:
+                pass
+            else:
+                g[i].next_to(g[i-1], RIGHT, buff=0.5)
+        
+        self.play(Create(g))
+        self.wait(2)
+        self.play(Uncreate(g))
+        # circle = Circle()  # create a circle
+        # circle.set_fill(PINK, opacity=0.5)  # set the color and transparency
+        # self.play(Create(circle))  # show the circle on screen
 
 class SquareToCircle(Scene):
     def construct(self):
