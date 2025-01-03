@@ -33,10 +33,15 @@ class AnimateSquareToCircle(Scene):
     def construct(self):
         c = Circle()
         s = Square()
+        t = Text("Coba objek text")
 
         self.play(Create(s))
         self.play(s.animate.rotate(PI / 4))
         self.play(Transform(s, c))
         self.play(
-                s.animate.set_fill("#00FF00", opacity=1)
+                s.animate.set_fill(PINK, opacity=1)
                 )
+        self.play(Uncreate(s))
+        self.play(AddTextLetterByLetter(t))
+        self.wait()
+        self.play(Uncreate(t))
