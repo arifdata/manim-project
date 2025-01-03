@@ -17,3 +17,14 @@ class SquareToCircle(Scene):
         self.play(Create(square))
         self.play(Transform(square, circle))
         self.play(FadeOut(square))
+
+class SquareAndCircle(Scene):
+    def construct(self):
+        c = Circle()
+        c.set_fill(PINK, opacity=0.7)
+
+        s = Square()
+        s.set_fill(BLUE, opacity=0.8)
+
+        s.next_to(c, RIGHT, buff=0.5)
+        self.play(Create(c), Create(s))
