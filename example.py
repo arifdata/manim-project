@@ -1,4 +1,7 @@
 from manim import *
+from manim_fonts import *
+
+config.background_color = AS2700.Y35_OFF_WHITE
 
 class CreateCircle(Scene):
     def construct(self):
@@ -33,7 +36,8 @@ class AnimateSquareToCircle(Scene):
     def construct(self):
         c = Circle()
         s = Square()
-        t = Text("Coba objek text")
+        with RegisterFont("Poppins") as fonts:
+            t = Text("Coba objek text", font=fonts[0])
 
         self.play(Create(s))
         self.play(s.animate.rotate(PI / 4))

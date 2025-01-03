@@ -1,9 +1,13 @@
+certifi==2024.12.14
+charset-normalizer==3.4.1
 click==8.1.8
 cloup==3.0.5
 decorator==5.1.1
 glcontext==3.0.0
+idna==3.10
 isosurfaces==0.1.2
 manim==0.18.1
+manim-fonts==0.4.0
 ManimPango==0.6.0
 mapbox_earcut==1.0.3
 markdown-it-py==3.0.0
@@ -13,11 +17,13 @@ moderngl-window==3.0.3
 networkx==3.4.2
 numpy==2.2.1
 pillow==11.1.0
+platformdirs==4.3.6
 pycairo==1.27.0
 pydub==0.25.1
 pyglet==2.0.20
 PyGLM==2.7.3
 Pygments==2.18.0
+requests==2.32.3
 rich==13.9.4
 scipy==1.14.1
 screeninfo==0.8.1
@@ -26,4 +32,5 @@ srt==3.5.3
 svgelements==1.9.6
 tqdm==4.67.1
 typing_extensions==4.12.2
+urllib3==2.3.0
 watchdog==6.0.0
