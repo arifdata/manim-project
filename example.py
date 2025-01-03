@@ -28,3 +28,15 @@ class SquareAndCircle(Scene):
 
         s.next_to(c, RIGHT, buff=0.5)
         self.play(Create(c), Create(s))
+
+class AnimateSquareToCircle(Scene):
+    def construct(self):
+        c = Circle()
+        s = Square()
+
+        self.play(Create(s))
+        self.play(s.animate.rotate(PI / 4))
+        self.play(Transform(s, c))
+        self.play(
+                s.animate.set_fill("#00FF00", opacity=1)
+                )
