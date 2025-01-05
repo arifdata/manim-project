@@ -64,3 +64,12 @@ class AnimateSquareToCircle(Scene):
         self.play(AddTextLetterByLetter(t))
         self.wait()
         self.play(Uncreate(t))
+
+class DiffRotations(Scene):
+    def construct(self):
+        l_square = Square(color=BLUE, fill_opacity=0.7).shift(2 * LEFT)
+        r_square = Square(color=GREEN, fill_opacity=0.7, side_length=3).shift(2 * RIGHT)
+        self.play(Create(l_square), Create(r_square), run_time=2)
+        self.play(l_square.animate.to_corner(UL), r_square.animate.to_corner(DR), run_time=2)
+        self.play(l_square.animate.set_color("#FF0000").rotate(60), run_time=2)
+        self.wait()
