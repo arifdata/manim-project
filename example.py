@@ -73,3 +73,9 @@ class DiffRotations(Scene):
         self.play(l_square.animate.to_corner(UL), r_square.animate.to_corner(DR), run_time=2)
         self.play(l_square.animate.set_color("#FF0000").rotate(60), run_time=2)
         self.wait()
+
+class CobaSVG(Scene):
+    def construct(self):
+        cheese = SVGMobject(file_name="./cheese.svg")
+        self.play(GrowFromCenter(cheese))
+        self.wait()
