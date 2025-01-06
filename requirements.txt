@@ -8,6 +8,7 @@ idna==3.10
 isosurfaces==0.1.2
 manim==0.18.1
 manim-fonts==0.4.0
+manim-play-timeline==0.1.1
 ManimPango==0.6.0
 mapbox_earcut==1.0.3
 markdown-it-py==3.0.0
